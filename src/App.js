@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import PokemonList from "./components/PokemonList";
+import React, { useState } from "react";
+import AddPokemonForm from "./components/AddPokemon";
 
 function App() {
+  const [pokemons, setPokemons] = useState([
+    {
+      name: "Pikachu",
+      type: "Electric",
+      url: "https://pokeapi.co/api/v2/pokemon/pikachu",
+    },
+    {
+      name: "Charizard",
+      type: "Fire/Flying",
+      url: "https://pokeapi.co/api/v2/pokemon/charizard",
+    },
+    {
+      name: "Bulbasaur",
+      type: "Grass/Poison",
+      url: "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+    },
+    {
+      name: "Squirtle",
+      type: "Water",
+      url: "https://pokeapi.co/api/v2/pokemon/squirtle",
+    },
+  ]);
+
+  function addNewPokemon(pokemon) {
+    setPokemons([...pokemons, pokemon]); //Pass a new array and not update the old one
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>List of Pokemons:</h1>
+      <PokemonList pokemons={pokemons} />
+      <AddPokemonForm onAddPokemon={addNewPokemon} />
     </div>
   );
 }
