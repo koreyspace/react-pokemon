@@ -20,21 +20,28 @@ export default function AddPokemonForm({ onAddPokemon }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label>Name:</label>
       <input
         type="text"
         value={name}
         onChange={(event) => setName(event.target.value)}
       />
+      <br></br>
+      <label>Type:</label>
       <input
         type="text"
         value={type}
         onChange={(event) => setType(event.target.value)}
       />
+      <br></br>
+      <label>URL:</label>
       <input
         type="text"
         value={url}
         onChange={(event) => setUrl(event.target.value)}
       />
+      <br></br>
+
       <button type="submit">Add Pokemon</button>
     </form>
   );

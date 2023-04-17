@@ -27,15 +27,21 @@ function App() {
     },
   ]);
 
+  // const renderPokemon = (pokemonData) => {
+  //   if (pokemonData.length === 0) {
+  //     return null;
+  //   }
+
   function addNewPokemon(pokemon) {
     setPokemons([...pokemons, pokemon]); //Pass a new array and not update the old one
   }
 
   return (
     <div>
+      <AddPokemonForm onAddPokemon={addNewPokemon} />
+
       <h1>List of Pokemons:</h1>
       <PokemonList pokemons={pokemons} />
-      <AddPokemonForm onAddPokemon={addNewPokemon} />
     </div>
   );
 }
