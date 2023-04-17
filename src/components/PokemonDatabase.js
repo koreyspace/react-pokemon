@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = "https://mdqfeoqgnshcmqqezlgr.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1kcWZlb3FnbnNoY21xcWV6bGdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE3Mjg1NDksImV4cCI6MTk5NzMwNDU0OX0.-p3o-DJ4hjhA1HmLsiPZb2x-470XmtLZC52iWlkJD0U";
+const supabaseUrl = "[INSERT DATABASE URL]";
+const supabaseKey = "[INSERT DATABASE KEY]";
 
 const client = createClient(supabaseUrl, supabaseKey);
 
