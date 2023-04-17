@@ -2,6 +2,7 @@ import "./App.css";
 import PokemonList from "./components/PokemonList";
 import React, { useState } from "react";
 import AddPokemonForm from "./components/AddPokemon";
+import PokemonDatabase from "./components/PokemonDatabase";
 
 function App() {
   const [pokemons, setPokemons] = useState([
@@ -42,6 +43,7 @@ function App() {
 
       <h1>List of Pokemons:</h1>
       <PokemonList pokemons={pokemons} />
+      <PokemonDatabase />
     </div>
   );
 }
