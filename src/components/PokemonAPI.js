@@ -32,13 +32,12 @@ export default function PokemonAPI() {
 
   return (
     <div>
-      <h1>Pokemon List</h1>
       <ul>
         {pokemon.map((pokemon) => (
-          <li key={pokemon.name}>
-            {pokemon.name}
-            {pokemon.type}
-            {pokemon.url}
+          <li>
+            <h3>{pokemon.name}</h3>
+            <p>Type: {pokemon.type}</p>
+            <p>URL: {pokemon.url}</p>
           </li>
         ))}
       </ul>

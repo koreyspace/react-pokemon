@@ -28,16 +28,22 @@ function App() {
     },
   ]);
 
+  const [apiPokemon, setApiPokemon] = useState([]);
+
   function addNewPokemon(pokemon) {
     setPokemons([...pokemons, pokemon]); //Pass a new array and not update the old one
+  }
+
+  function handleData(data) {
+    setApiPokemon(data);
   }
 
   return (
     <div>
       <h1>List of Pokemons:</h1>
-      <PokemonList pokemons={pokemons} />
-      <AddPokemonForm onAddPokemon={addNewPokemon} />
-      <PokemonAPI />
+      <PokemonList pokemons={pokemons} apiPokemon={apiPokemon} />
+      {/* <AddPokemonForm onAddPokemon={addNewPokemon} /> */}
+      <PokemonAPI onData={handleData} />
     </div>
   );
 }
