@@ -28,7 +28,6 @@ function PokemonList() {
 
   return (
     <div>
-      <h1>Pokemons</h1>
       <ul>
         {pokemon.map((pokemon, index) => (
           <li key={index}>

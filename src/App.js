@@ -42,7 +42,7 @@ function App() {
       <AddPokemonForm onAddPokemon={addNewPokemon} />
 
       <h1>List of Pokemons:</h1>
-      <PokemonList pokemons={pokemons} />
+      {/* <PokemonList pokemons={pokemons} /> */}
       <PokemonDatabase />
     </div>
   );
